@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Календарь задач</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/main.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Календарь задач</h1>
+        <div class="content-wrapper">
+            <div class="tasks-section">
+                <div class="task-form">
+                    <input type="text" id="task-title" placeholder="Название задачи">
+                    <textarea id="task-description" placeholder="Описание задачи"></textarea>
+                    <input type="date" id="task-date" placeholder="Дата задачи">
+                    <select id="task-priority">
+                        <option value="low">Низкий</option>
+                        <option value="medium">Средний</option>
+                        <option value="high">Высокий</option>
+                    </select>
+                    <button id="add-task">Добавить задачу</button>
+                </div>
+                <div class="tasks-list">
+                    <h2>Список задач</h2>
+                    <button id="sort-by-date">Сортировать по дате</button>
+                    <ul id="tasks-list"></ul>
+                </div>
+            </div>
+            <div id="calendar"></div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/locales/ru.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
