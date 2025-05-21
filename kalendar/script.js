@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
             id: task.id,
             title: task.title,
             start: task.date,
-            color: task.priority === 'высокий' ? 'red' : task.priority === 'средний' ? 'orange' : 'green',
+            color: task.priority === 'high' ? 'red' : task.priority === 'medium' ? 'orange' : 'green',
             extendedProps: {
                 description: task.description,
                 completed: task.completed
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         id: Date.now(),
                         title,
                         description,
-                        priority,
+                        priority: priority === 'низкий' ? 'low' : priority === 'средний' ? 'medium' : 'high',
                         completed: false,
                         date
                     };
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         id: task.id,
                         title: task.title,
                         start: task.date,
-                        color: task.priority === 'высокий' ? 'red' : task.priority === 'средний' ? 'orange' : 'green',
+                        color: priority === 'высокий' ? 'red' : priority === 'средний' ? 'orange' : 'green',
                         extendedProps: {
                             description: task.description,
                             completed: task.completed
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
             id: task.id,
             title: task.title,
             start: task.date,
-            color: task.priority === 'высокий' ? 'red' : task.priority === 'средний' ? 'orange' : 'green',
+            color: task.priority === 'high' ? 'red' : task.priority === 'medium' ? 'orange' : 'green',
             extendedProps: {
                 description: task.description,
                 completed: task.completed
